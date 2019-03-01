@@ -1,0 +1,140 @@
+@charset "UTF-8";
+.star-cb-group {
+  /* remove inline-block whitespace */
+  font-size: 0;
+  /* flip the order so we can use the + and ~ combinators */
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  /* the hidden clearer */
+}
+.star-cb-group * {
+  font-size: 1rem;
+}
+.star-cb-group > input {
+  display: none;
+}
+.star-cb-group > input + label {
+  /* only enough room for the star */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 9999px;
+  width: 1em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.star-cb-group > input + label:before {
+  display: inline-block;
+  text-indent: -9999px;
+  content: "☆";
+  color: #888;
+}
+.star-cb-group > input:checked ~ label:before, .star-cb-group > input + label:hover ~ label:before, .star-cb-group > input + label:hover:before {
+  content: "★";
+  color: #e52;
+  text-shadow: 0 0 1px #333;
+}
+.star-cb-group > .star-cb-clear + label {
+  text-indent: -9999px;
+  width: .5em;
+  margin-left: -.5em;
+}
+.star-cb-group > .star-cb-clear + label:before {
+  width: .5em;
+}
+.star-cb-group:hover > input + label:before {
+  content: "☆";
+  color: #888;
+  text-shadow: none;
+}
+.star-cb-group:hover > input + label:hover ~ label:before, .star-cb-group:hover > input + label:hover:before {
+  content: "★";
+  color: #e52;
+  text-shadow: 0 0 1px #333;
+}
+
+:root {
+  font-size: 1.3em;
+  font-family: Helvetica, arial, sans-serif;
+}
+
+
+
+fieldset {
+  border: 0;
+  width: 10em;
+  border-radius: 1px;
+  padding: .2em 1.5em 0.9em .4em;
+  
+}
+
+.grid-image{
+  padding:10px 10px 10px 10px;
+  width: 100%;
+  height: 50%;
+}
+.grid-item{
+  height:300px;
+  border:1px solid;
+  padding:10px 10px 10px 10px;
+  margin-top: 15px;
+  overflow:hidden;
+}
+.views
+{
+  position:absolute;
+  top:54%;
+  left:66%;
+}
+.title{
+  font-size:30px;
+}
+.info, .info:hover, .info:link, .info:visited
+{
+  text-decoration:none;
+  color:black;
+}
+.showinfo-title
+{
+  font-size:60px;
+  font-family:segoe ui;
+  border-bottom: 1px solid;
+}
+.showinfo-desc{
+  padding:20px;
+}
+.image img{
+  width:300px;
+
+}
+.showinfo-label
+{
+  padding:20px 10px 10px 10px;
+}
+.view-count{
+  font-size:20px;
+}
+.reviews-ratings{
+  padding-top: 15px;
+}
+.reviews{
+  border:1px solid #cccccc;
+  padding: 10px 10px 10px 10px;
+}
+.addplace-title
+{
+  font-size:40px;
+  font-family:segoe ui;
+  border-bottom: 1px solid;
+}
+.form{
+  padding-top:30px;
+}
+.searchplaces
+{
+  width:300px;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 300;
+  margin-left: 12px;
+  margin-top:12px;
+}

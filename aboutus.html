@@ -1,0 +1,52 @@
+<html>
+<head>
+	<link rel="stylesheet" href="style.css" type="text/css">
+  <script src="js/jquery-1.12.0.min.js"></script>
+	<script>
+	  $(function() 
+	  {
+    	$( "i" ).click(function() 
+    	{
+      		$( "i,span" ).toggleClass( "press", 1000 );
+    	});
+  	  });
+      function changeBackground(v)
+      {
+        var bg=document.getElementById("bg");
+        if(v=='res')
+          bg.style.backgroundImage = "url(img/restaurant.jpg)";
+        else if(v=='sho')
+          bg.style.backgroundImage = "url(img/shopping.jpg)";
+        else if(v=='nig')
+          bg.style.backgroundImage = "url(img/nightlife.jpg)";
+      }
+      function reset()
+      {
+         var bg=document.getElementById("bg");
+         bg.style.backgroundImage = "url(img/4.jpg)";
+         bg.size='100%';
+      }
+      
+  	  </script>
+</head>
+<body>
+<div  class="like" Id="bg"></div>
+<div class="header">
+  <div class="logo">
+  <a href="index.php"><img src="img/logo(ps1).png"></a>
+</div>
+    <div class ="navbar">
+    <ul>
+  <li><a class="nav" href="login.html">Login</a></li>
+  <li><a class="nav" href="signup.html">Sign Up</a></li>
+  <li><a class="nav" href="aboutus.html">About Us</a></li>
+  </ul>
+</div>
+<div class="aboutus">
+<p>Smartcity enables you to know your city and have a perfect holiday.Smartcity offers suggestions from thousands of travellers and a wide variety of travel choices and planning in your city.
+Smartcity's current product offering consists of  knowing best restaurants, hotel rooms, schools,colleges,emergency places,hospitals,places for night life and much more......We will shortly be expanding our services to offer a wide array of information for our city and also include hotel bookings on our website.</p>
+ </div>
+  
+
+</body>
+</html>

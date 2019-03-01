@@ -1,0 +1,83 @@
+<html>
+<head>
+	<link rel="stylesheet" href="style.css" type="text/css">
+  <script src="js/jquery-1.12.0.min.js"></script>
+	<script>
+	  $(function() 
+	  {
+    	$( "i" ).click(function() 
+    	{
+      		$( "i,span" ).toggleClass( "press", 1000 );
+    	});
+  	  });
+      function changeBackground(v)
+      {
+        var bg=document.getElementById("bg");
+        if(v=='res')
+          bg.style.backgroundImage = "url(img/restaurant.jpg)";
+        else if(v=='sho')
+          bg.style.backgroundImage = "url(img/shopping.jpg)";
+        else if(v=='nig')
+          bg.style.backgroundImage = "url(img/nightlife.jpg)";
+      }
+      function reset()
+      {
+         var bg=document.getElementById("bg");
+         bg.style.backgroundImage = "url(img/4.jpg)";
+         bg.size='100%';
+      }
+      
+  	  </script>
+</head>
+<body>
+<div  class="like" Id="bg"></div>
+<div class="header">
+  <div class="logo">
+  <a href="index.html"><img src="img/logo(ps1).png"></a>
+</div>
+    <div class ="navbar">
+    <ul>
+  <li><a class="nav" href="login.html">Login</a></li>
+  <li><a class="nav" href="signup.html">Sign Up</a></li>
+  <li><a class="nav" href="aboutus.html">About Us</a></li>
+  </ul>
+</div>
+     </div>
+     
+  <div class="over">
+    <i></i>
+  <span class="liked">liked!</span>
+  </div> 
+  <div class="categories">
+  <span class="btngroup">
+    <button class="btngroup--btn"><a href="restaurant.html" onmouseover="changeBackground('res')" onmouseout="reset()">Restaurants</a></button>
+    <button class="btngroup--btn">24</button>
+  </span>
+  <span class="btngroup">
+    <button class="btngroup--btn"><a href="shopping.html" onmouseover="changeBackground('sho')" onmouseout="reset()">Shopping</a></button>
+    <button class="btngroup--btn">20</button>
+  </span>
+  <span class="btngroup">
+    <button class="btngroup--btn"><a href="nightlife.html" onmouseover="changeBackground('nig')" onmouseout="reset()">NightLife</a></button>
+    <button class="btngroup--btn">15</button>
+  </span>
+  <span class="btngroup">
+    <button class="btngroup--btn">Historical Places</a></button>
+    <button class="btngroup--btn">10</button>
+  </span>
+  <span class="btngroup">
+    <button class="btngroup--btn">Emergency Location</button>
+    <button class="btngroup--btn">50</button>
+  </span>
+  <span class="btngroup">
+    <button class="btngroup--btn">Bus Routes</button>
+    <button class="btngroup--btn">500</button>
+  </span>
+  <span class="btngroup">
+    <button class="btngroup--btn">Things to Do</button>
+    <button class="btngroup--btn">20</button>
+  </span>
+</div>
+
+</body>
+</html>

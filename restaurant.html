@@ -1,0 +1,292 @@
+<html>
+<head>
+	<script src="js/jquery-1.12.0.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="css/font-awesome.css" type="text/css">
+  <link rel="stylesheet" href="css/categories.css" type="text/css">
+	<script src="js/bootstrap.js">
+	</script>
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCFy36L72NkL8Q8QPxXnK9AWuf8byAwi-I">
+</script>
+
+<script>
+function initialize() {
+	var mark=new google.maps.LatLng(19.0930, 72.8258);
+  var mapProp = {
+    center:mark,
+    zoom:11	,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var icons="http://knowyourcity.esy.es/wp-content/themes/ait-city-guide-2-49/cityguide/design/img/pins/";
+  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+  var marker = new google.maps.Marker({
+  position: mark,
+  map: map,
+  icon: icons+'food_pin.png'
+});
+  marker.setMap(map);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.php">Home</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Restaurants</a></li>
+            <li><a href="#">Shopping</a></li>
+            <li><a href="#">Night Life</a></li>
+            <li><a href="#">Historical Places</a></li>
+            <li><a href="#">Bus Routes</a></li>
+            <li><a href="#">Things To Do</a></li>
+          </ul>
+        </li>
+        <li class="active"><a class="navbar-brand" href="aboutus.html">About Us<span class="sr-only">(current)</span></a></li>
+        <li>
+        <a href="#"> Contact Us</a>
+      </li>
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account<span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Sign Up</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div id="googleMap" style="width:100%;height:600px;"></div>
+<div class="container">
+<div class="row"></div>
+  <div class="row">
+    <div class="col-md-3 col-xs-12 col-sm-6">
+   		 <div class="grid-item">
+          <img class="grid-image img-thumbnail" src="img/3.jpg">
+          
+            <fieldset>
+    			<span class="star-cb-group">
+			      <input type="radio" id="rating-5" name="rating" value="5" /><label for="rating-5">5</label>
+			      <input type="radio" id="rating-4" name="rating" value="4" checked="checked" /><label for="rating-4">4</label>
+			      <input type="radio" id="rating-3" name="rating" value="3" /><label for="rating-3">3</label>
+			      <input type="radio" id="rating-2" name="rating" value="2" /><label for="rating-2">2</label>
+			      <input type="radio" id="rating-1" name="rating" value="1" /><label for="rating-1">1</label>
+			      <input type="radio" id="rating-0" name="rating" value="0" class="star-cb-clear" /><label for="rating-0">0</label>
+			    </span>
+  			</fieldset>
+  			<div class="views">
+  				<i class="fa fa-eye"></i> 1000
+  			</div>
+  			<div class="description">
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			</div>
+          </div>
+    </div>
+    
+    <div class="col-md-3 col-xs-12 col-sm-6">
+   		 <div class="grid-item">
+          <img class="grid-image img-thumbnail" src="img/3.jpg">
+          
+            <fieldset>
+    			<span class="star-cb-group">
+			      <input type="radio" id="rating-5" name="rating" value="5" /><label for="rating-5">5</label>
+			      <input type="radio" id="rating-4" name="rating" value="4" checked="checked" /><label for="rating-4">4</label>
+			      <input type="radio" id="rating-3" name="rating" value="3" /><label for="rating-3">3</label>
+			      <input type="radio" id="rating-2" name="rating" value="2" /><label for="rating-2">2</label>
+			      <input type="radio" id="rating-1" name="rating" value="1" /><label for="rating-1">1</label>
+			      <input type="radio" id="rating-0" name="rating" value="0" class="star-cb-clear" /><label for="rating-0">0</label>
+			    </span>
+  			</fieldset>
+  			<div class="views">
+  				<i class="fa fa-eye"></i> 1000
+  			</div>
+  			<div class="description">
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			</div>
+          </div>
+    </div>
+    
+    <div class="col-md-3 col-xs-12 col-sm-6">
+   		 <div class="grid-item">
+          <img class="grid-image img-thumbnail" src="img/3.jpg">
+          
+            <fieldset>
+    			<span class="star-cb-group">
+			      <input type="radio" id="rating-5" name="rating" value="5" /><label for="rating-5">5</label>
+			      <input type="radio" id="rating-4" name="rating" value="4" checked="checked" /><label for="rating-4">4</label>
+			      <input type="radio" id="rating-3" name="rating" value="3" /><label for="rating-3">3</label>
+			      <input type="radio" id="rating-2" name="rating" value="2" /><label for="rating-2">2</label>
+			      <input type="radio" id="rating-1" name="rating" value="1" /><label for="rating-1">1</label>
+			      <input type="radio" id="rating-0" name="rating" value="0" class="star-cb-clear" /><label for="rating-0">0</label>
+			    </span>
+  			</fieldset>
+  			<div class="views">
+  				<i class="fa fa-eye"></i> 1000
+  			</div>
+  			<div class="description">
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			</div>
+          </div>
+    </div>
+    
+    <div class="col-md-3 col-xs-12 col-sm-6">
+   		 <div class="grid-item">
+          <img class="grid-image img-thumbnail" src="img/3.jpg">
+          
+            <fieldset>
+    			<span class="star-cb-group">
+			      <input type="radio" id="rating-5" name="rating" value="5" /><label for="rating-5">5</label>
+			      <input type="radio" id="rating-4" name="rating" value="4" checked="checked" /><label for="rating-4">4</label>
+			      <input type="radio" id="rating-3" name="rating" value="3" /><label for="rating-3">3</label>
+			      <input type="radio" id="rating-2" name="rating" value="2" /><label for="rating-2">2</label>
+			      <input type="radio" id="rating-1" name="rating" value="1" /><label for="rating-1">1</label>
+			      <input type="radio" id="rating-0" name="rating" value="0" class="star-cb-clear" /><label for="rating-0">0</label>
+			    </span>
+  			</fieldset>
+  			<div class="views">
+  				<i class="fa fa-eye"></i> 1000
+  			</div>
+  			<div class="description">
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			</div>
+          </div>
+    </div>
+    
+    <div class="col-md-3 col-xs-12 col-sm-6">
+   		 <div class="grid-item">
+          <img class="grid-image img-thumbnail" src="img/3.jpg">
+          
+            <fieldset>
+    			<span class="star-cb-group">
+			      <input type="radio" id="rating-5" name="rating" value="5" /><label for="rating-5">5</label>
+			      <input type="radio" id="rating-4" name="rating" value="4" checked="checked" /><label for="rating-4">4</label>
+			      <input type="radio" id="rating-3" name="rating" value="3" /><label for="rating-3">3</label>
+			      <input type="radio" id="rating-2" name="rating" value="2" /><label for="rating-2">2</label>
+			      <input type="radio" id="rating-1" name="rating" value="1" /><label for="rating-1">1</label>
+			      <input type="radio" id="rating-0" name="rating" value="0" class="star-cb-clear" /><label for="rating-0">0</label>
+			    </span>
+  			</fieldset>
+  			<div class="views">
+  				<i class="fa fa-eye"></i> 1000
+  			</div>
+  			<div class="description">
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			This is a sample description.
+  			</div>
+          </div>
+    </div>
+    
+    
+    
+    <div class="col-md-3">
+    </div>
+    </div>
+  </div>
+</body>
+</html>
